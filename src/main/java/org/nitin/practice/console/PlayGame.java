@@ -61,10 +61,10 @@ public class PlayGame {
         		System.out.println();
         		
         		System.out.println("\n\nChoose from following actions: \n" +
-                		"to find options of moves, type  'options'\n" +
-                		"to quit game, type 'quit'\n" +
-                		"to see score at any time, type 'score'\n" +
-                		"to play a move, type move name\n\n");
+                		"-To find options of moves, type  'options'\n" +
+                		"-To see score at any time, type 'score'\n" +
+                		"-To play a move, type move name from options\n" +
+                		"-To quit game, type 'quit'\n\n");
             }
             else {
                 //System.out.println("Seems like you entered player name as something which is not allowed");
@@ -89,7 +89,8 @@ public class PlayGame {
             System.out.print("Enter your move : ");
             
             String playerMove = Utilities.getUserInput();
-            if(playerMove.equalsIgnoreCase("options")) {
+            if(playerMove.equalsIgnoreCase("options") ||
+            		playerMove.equalsIgnoreCase("option")) {
                 System.out.println(MovesEnum.getMovesCatalogue());
                 return play;
             }
@@ -113,7 +114,9 @@ public class PlayGame {
             int userImpact = MovesEnum.getImpactForMove(playerMove);
             //System.out.println("Log: " + playerName + " move's damage : " + userImpact);
 
-            int enemysMoveImpact = (int)(Math.random() * 100 + 10);
+            int enemysMoveImpact = (int)(Math.random() * 5 + 4);
+            System.out.println("enemysMoveImpact :" + enemysMoveImpact);
+            enemysMoveImpact = enemysMoveImpact*10;
             System.out.println("Log: Enemy Move's damage: " + enemysMoveImpact);
 
 
