@@ -32,3 +32,7 @@ Upon start of game, user can make their own characters, and start a new game wit
 Commands of game are entered by users by typing in move user wants to make.
 
 For confirmation prompt, user can confirm by typing: 'yes' or 'y' or 'ok' or 'sure'
+
+
+Running the game:
+To run the code, you can clone this git repo, import the code in Eclipse and run Main.java file as Java Application.
